@@ -36,10 +36,11 @@ This is a basic example which shows you how to solve a common problem:
 library(AMIM)
 library(data.table)
 
-data <- AMIM::crypto # load the example data of crypto currencies
+data <- AMIM::exampledata # load the example data
 
 AMIM <- AMIM.roll(data.table = data, identity.col = "ticker", rollWindow = 252, Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10)
-## basic example code
+AMIM[, .SD[(.N - 5):(.N), ], by = ticker] # show the last 5 observations for each ticker
 ```
+
 
 

@@ -40,8 +40,11 @@ This function computes the rolling window AMIM  for a given data.table
 \examples{
 library(AMIM)
 library(data.table)
-data <- AMIM::crypto # load the example data of crypto currencies
-AMIM <- AMIM.roll(data.table = data, identity.col = "ticker", rollWindow = 252, Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10)
+data <- AMIM::exampledata # load the example data
+AMIM <- AMIM.roll(
+  data.table = data, identity.col = "ticker", rollWindow = 252,
+  Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10
+)
 
 AMIM[, .SD[(.N - 5):(.N), ], by = ticker] # Last 5 rows of each instrument
 }

@@ -1,3 +1,6 @@
+#' @import data.table
+#' @importFrom stats  ar na.omit sd
+#' @importFrom utils setTxtProgressBar txtProgressBar
 #' @title MIM roll
 #' @description This function computes the rolling window MIM  for a given data.table
 #' @param data.table data.table with the data
@@ -15,8 +18,11 @@
 #' @examples
 #' library(AMIM)
 #' library(data.table)
-#' data <- AMIM::crypto # load the example data of crypto currencies
-#' MIM <- MIM.roll(data.table = data, identity.col = "ticker", rollWindow = 252, Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10)
+#' data <- AMIM::exampledata # load the example data
+#' MIM <- MIM.roll(
+#'   data.table = data, identity.col = "ticker", rollWindow = 252,
+#'   Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10
+#' )
 MIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col, min.obs, max.lag, a) {
   data <- data.table::copy(data.table)
   data.table::setDT(data)
@@ -73,6 +79,7 @@ MIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col,
 }
 
 #' @title AMIM roll
+#' @import data.table
 #' @description This function computes the rolling window AMIM  for a given data.table
 #' @param data.table data.table with the data
 #' @param identity.col column name of the identity intrument for example the stock ticker
@@ -88,8 +95,11 @@ MIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col,
 #' @examples
 #' library(AMIM)
 #' library(data.table)
-#' data <- AMIM::crypto # load the example data of crypto currencies
-#' AMIM <- AMIM.roll(data.table = data, identity.col = "ticker", rollWindow = 252, Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10)
+#' data <- AMIM::exampledata # load the example data
+#' AMIM <- AMIM.roll(
+#'   data.table = data, identity.col = "ticker", rollWindow = 252,
+#'   Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10
+#' )
 #'
 #' AMIM[, .SD[(.N - 5):(.N), ], by = ticker] # Last 5 rows of each instrument
 AMIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col, min.obs, max.lag) {
