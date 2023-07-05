@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AMIM
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of AMIM is to provide an easy function to compute the rolling window AMIM following the paper of Tran & Leirvik (2019), "A simple but powerful measure of market efficiency". Finance Research Letters, 29, pp.141-151.
+
+## Installation
+
+You can install the released version of AMIM from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("AMIM")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(AMIM)
+library(data.table)
+
+data <- AMIM::crypto # load the example data of crypto currencies
+
+AMIM <- AMIM.roll(data.table = data, identity.col = "ticker", rollWindow = 252, Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10)
+## basic example code
+```
+
+

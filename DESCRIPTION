@@ -1,0 +1,16 @@
+Package: AMIM
+Type: Package
+Title: Adjusted Market Inefficient Measure.
+Version: 0.1.0
+Authors@R: 
+    person(given= "Vu", family="Tran",middle="Le" , email= "gelotran@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0002-3593-9611"))
+Maintainer: The package maintainer <gelotran@gmail.com>
+Description: Package for calculating AMIM following Tran & Leirvik. (2019) "A simple but powerful measure of market efficiency". Finance Research Letters, 29, pp.141-151.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    data.table,
+    R (>= 2.10)
+RoxygenNote: 7.1.1
