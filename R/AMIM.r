@@ -20,8 +20,8 @@
 #' library(data.table)
 #' data <- AMIM::exampledata # load the example data
 #' MIM <- MIM.roll(
-#'   data.table = data, identity.col = "ticker", rollWindow = 252,
-#'   Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10
+#'   data.table = data, identity.col = "ticker", rollWindow = 60,
+#'   Date.col = "Date", return.col = "RET", min.obs = 30, max.lag = 10
 #' )
 MIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col, min.obs, max.lag, a) {
   data <- data.table::copy(data.table)
@@ -97,8 +97,8 @@ MIM.roll <- function(data.table, identity.col, Date.col, rollWindow, return.col,
 #' library(data.table)
 #' data <- AMIM::exampledata # load the example data
 #' AMIM <- AMIM.roll(
-#'   data.table = data, identity.col = "ticker", rollWindow = 252,
-#'   Date.col = "Date", return.col = "RET", min.obs = 100, max.lag = 10
+#'   data.table = data, identity.col = "ticker", rollWindow = 60,
+#'   Date.col = "Date", return.col = "RET", min.obs = 30, max.lag = 10
 #' )
 #'
 #' AMIM[, .SD[(.N - 5):(.N), ], by = ticker] # Last 5 rows of each instrument
