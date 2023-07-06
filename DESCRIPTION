@@ -1,12 +1,12 @@
 Package: AMIM
 Type: Package
-Title: Functions to Compute the Adjusted Market Inefficient Measure for Financial Instruments
+Title: Compute the Adjusted Market Inefficient Measure
 Version: 1.0.0
 Authors@R: 
     person(given= "Vu Le", family="Tran", email= "gelotran@gmail.com", role = c("aut", "cre","cph"),
            comment = c(ORCID = "https://orcid.org/0000-0002-3593-9611"))
 Maintainer: Vu Le Tran <gelotran@gmail.com>
-Description: Package for calculating Adjusted Market Inefficient Measure following Tran & Leirvik. (2019) "A simple but powerful measure of market efficiency". Finance Research Letters, 29, pp.141-151.
+Description: Fast tool to calculate the Adjusted Market Inefficient Measure following Tran & Leirvik (2019) "A simple but powerful measure of market efficiency", Finance Research Letters, 29, pp.141-151. Provides rolling window estimates of the Adjusted Market Inefficient Measure for mutiple instruments simultaneously. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
