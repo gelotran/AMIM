@@ -6,7 +6,7 @@ Authors@R:
     person(given= "Vu Le", family="Tran", email= "gelotran@gmail.com", role = c("aut", "cre","cph"),
            comment = c(ORCID = "https://orcid.org/0000-0002-3593-9611"))
 Maintainer: Vu Le Tran <gelotran@gmail.com>
-Description: Fast tool to calculate the Adjusted Market Inefficient Measure following Tran & Leirvik (2019) "A simple but powerful measure of market efficiency", Finance Research Letters, 29, pp.141-151. Provides rolling window estimates of the Adjusted Market Inefficient Measure for mutiple instruments simultaneously. 
+Description: Fast tool to calculate the Adjusted Market Inefficiency Measure following Tran & Leirvik's (2019) "A simple but powerful measure of market efficiency" in Finance Research Letters, 29, pp. 141-151. This tool provides rolling window estimates of the Adjusted Market Inefficiency Measure for multiple instruments simultaneously. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
